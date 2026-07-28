@@ -36,9 +36,9 @@
 // This uses a free Firebase Realtime Database as that shared backend.
 // Fill in DATABASE_URL after following the setup steps in README.md.
 // ─────────────────────────────────────────────────────────────────────────
-const DATABASE_URL = 'https://forms-matrix-default-rtdb.asia-southeast1.firebasedatabase.app; // ⚠️ was pointing at the Firebase Console page, not the database — fixed to the likely REST URL, but confirm it against the URL shown at the top of your Realtime Database page (it ends in .firebasedatabase.app instead if your database is regional)
+const DATABASE_URL = 'https://pcs-forms-matrix-default-rtdb.firebaseio.com/; // ⚠️ was pointing at the Firebase Console page, not the database — fixed to the likely REST URL, but confirm it against the URL shown at the top of your Realtime Database page (it ends in .firebasedatabase.app instead if your database is regional)
 const POLL_MS = 5000;
-const configured = DATABASE_URL && !DATABASE_URL.includes('https://forms-matrix-default-rtdb.asia-southeast1.firebasedatabase.app');
+const configured = DATABASE_URL && !DATABASE_URL.includes('https://pcs-forms-matrix-default-rtdb.firebaseio.com/');
 
 const LOG_CAP = 200;
 
@@ -48,7 +48,7 @@ const LOG_CAP = 200;
 // (see the "Show personal links to share" panel on the board).
 // Note: this keeps casual visitors out, it is not real login security —
 // anyone who views this page's source can still read the value below.
-const BOARD_KEY = 'https://rishabprovana.github.io/Break-Tracker-Forms-Team/#board';
+const BOARD_KEY = 'https://rishabprovana.github.io/Break-Tracker-Forms-Team/';
 
 const EMPLOYEES = [
   { id: '112590', name: 'Arushi Sharma',    title: 'Business Analyst',    shift: '13:00–22:30', lunchAllowed: true },
